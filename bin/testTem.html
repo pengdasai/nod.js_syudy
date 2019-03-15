@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<script src="../node_modules/art-template/lib/template-web.js"></script>
+<script type="text/template" id="tp1">
+hello {{name}}
+</script>
+<script>
+    var ret = template('tp1',{
+        name:'jack'
+    });
+    console.log(ret);
+</script>
+</body>
+</html>
