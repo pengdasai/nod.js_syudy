@@ -2,6 +2,7 @@ var http = require('http');
 var fs = require('fs');
 var template = require('art-template');
 var url = require('url');
+
 var comments = [
     {
         name:'新开普',
@@ -31,7 +32,7 @@ http.createServer(function (req,res) {
     //解析路径
     var pathObj = url.parse(req.url,true);
     var pathName = pathObj.pathname;
-    console.log(pathObj)
+    //console.log(pathObj)
     if (pathName === '/'){
         fs.readFile('../views/words.html',function (error,data) {
             if (error){
@@ -57,6 +58,16 @@ http.createServer(function (req,res) {
             }
             res.end(data)
         })
+    } else if (pathName==='/pinglun') {
+       //res.end(JSON.stringify(pathObj.query));
+        var comment = pathObj.query;
+        comment.dateTime = '2019年3月18日09:12:05';
+        comments.push(comment);
+        //开始处理重定向
+        //状态码设置为302，通过location进行跳转
+        res.statusCode = 302;
+        res.setHeader('location','/');
+        res.end();
     } else {
         fs.readFile('../views/404.html',function (err,data) {
             if (err){

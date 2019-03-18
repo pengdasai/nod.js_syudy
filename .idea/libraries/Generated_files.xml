@@ -3,11 +3,15 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/dist/bin/app.js" />
+        <item url="file://$PROJECT_DIR$/dist/bin/testInsert.js" />
+        <item url="file://$PROJECT_DIR$/dist/bin/testMysql.js" />
         <item url="file://$PROJECT_DIR$/dist/public/stylesheets/lib/bootstrap/Gruntfile.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/dist/bin/app.js" />
+      <root url="file://$PROJECT_DIR$/dist/bin/testInsert.js" />
+      <root url="file://$PROJECT_DIR$/dist/bin/testMysql.js" />
       <root url="file://$PROJECT_DIR$/dist/public/stylesheets/lib/bootstrap/Gruntfile.js" />
     </CLASSES>
     <SOURCES />
